@@ -9,4 +9,4 @@ COPY ./ ./
 # 실행 권한 부여
 RUN chmod +x ./check_docker.sh
 
-CMD ["./check_docker.sh"]  # 컨테이너 실행 시 시작할 스크립트
+CMD ["./check_docker.sh"]
