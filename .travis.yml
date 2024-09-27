@@ -10,7 +10,7 @@ before_install:
   - docker build -t basicpail93/docker-ping-app -f Dockerfile .
 
 script:
-  - docker run -e CI=true basicpail93/docker-ping-app -- --coverage
+  - docker run -e CI=true basicpail93/docker-ping-app --coverage
 
 after_success:
   - echo "build success!"
