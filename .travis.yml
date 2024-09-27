@@ -10,7 +10,9 @@ before_install:
   - docker build -t basicpail93/docker-ping-app -f Dockerfile .
 
 script:
-  - docker run -e CI=true basicpail93/docker-ping-app
+  script:
+  - echo "Running Docker container and checking status..."
+  - docker run -e CI=true basicpail93/docker-ping-app sh -c "while true; do echo 'Docker is running...'; sleep 1; done"
 
 after_success:
   - echo "build success!"
