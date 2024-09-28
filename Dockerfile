@@ -20,6 +20,6 @@
 
 FROM nginx
 WORKDIR /home/ssg/app
-COPY ./ ./
-COPY /home/ssg/app/build /usr/share/nginx/html
+# COPY ./ ./
+COPY ./build /usr/share/nginx/html
 
