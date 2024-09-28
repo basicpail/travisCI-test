@@ -7,11 +7,11 @@ services:
 
 before_install:
   - echo "Start creating an image with dockerfile on Travis!"
-  - docker build -t basicpail93/docker-ping-app -f Dockerfile .
+  - docker build -t basicpail/docker-ping-app -f Dockerfile .
 
 script:
   - echo "Running Docker container!"
-  - docker run -e CI=true basicpail93/docker-ping-app
+  - docker run -e CI=true basicpail/docker-ping-app
 
 after_success:
   - echo "Build success!"
