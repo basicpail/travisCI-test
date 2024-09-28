@@ -21,5 +21,5 @@
 FROM nginx
 WORKDIR /home/ssg/app
 COPY ./ ./
-COPY --from=builder /home/ssg/app/build /usr/share/nginx/html
+COPY /home/ssg/app/build /usr/share/nginx/html
 
